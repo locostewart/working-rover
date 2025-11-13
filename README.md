@@ -1,5 +1,5 @@
 ## Requirements: 
-Have Linux installed.
+Have Linux and ROS2 installed.
 
 ## Usage instructions:
 
