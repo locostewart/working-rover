@@ -5,7 +5,7 @@ Have Linux installed.
 
 #### 1) Making a Workspace
 (Note--If you already have a workspace you are using you can skip this step.  None of the code is dependent on the name of the workspace.
-In linux, make a new workspace with the following commands:
+In linux, make a new workspace by running the following commands individually:
 
 ```
 source /opt/ros/jazzy/setup.bash
@@ -24,22 +24,19 @@ Put the main folder in this github into your src folder of your workspace.  It's
 Here's an image of the file path.  Note that my workspace is called ws_4.
 
 #### 3) Opening the file
-In linux, run the commands one at a time:
+In linux, run the following commands one at a time:
 
 ```
 cd ros2_ws
 ```
-Replace "ros2_ws" with your workspace name.  If you're already in your workspace you can skip this step.
+*Replace "ros2_ws" with your workspace name.  If you're already in your workspace you can skip this step.
 ```
 source install/setup.bash
-```
-```
 colcon build
-```
-```
 ros2 launch ROS_description gazebo.launch.py
 ```
 
+This shou
 
 
 
