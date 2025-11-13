@@ -64,7 +64,7 @@ Open a third linux tab and run the following commands one at a time:
 cd ros2_ws
 ```
 *Again, replace "ros2_ws" with your workspace name. 
-```
+
 ```
 source install/setup.bash
 colcon build
