@@ -53,14 +53,14 @@
     <inertia ixx="0.06032" iyy="0.112527" izz="0.06032" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.0 0.25 -0.560052" rpy="0 0 0"/>
+    <origin xyz="0.0 0.25 -0.127626" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.0 0.25 -0.560052" rpy="0 0 0"/>
+    <origin xyz="0.0 0.25 -0.12762" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -74,14 +74,14 @@
     <inertia ixx="0.06032" iyy="0.112527" izz="0.06032" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.3048 0.25 -0.560052" rpy="0 0 0"/>
+    <origin xyz="0.3048 0.25 -0.127626" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.3048 0.25 -0.560052" rpy="0 0 0"/>
+    <origin xyz="0.3048 0.25 -0.127626" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -153,19 +153,19 @@
 
 <link name="Tire_v2_Mirror__1">
   <inertial>
-    <origin xyz="-8.976632423216262e-17 0.5635 -0.1771740000000001" rpy="0 0 0"/>
+    <origin xyz="-5.551115123125783e-17 -0.25 -0.12762600183486938" rpy="0 0 0"/>
     <mass value="8.677104752089251"/>
     <inertia ixx="0.06032" iyy="0.112527" izz="0.06032" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.0 0.25 -0.3048" rpy="0 0 0"/>
+    <origin xyz="-5.551115123125783e-17 -0.25 -0.12762600183486938" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2_Mirror__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.0 0.25 -0.3048" rpy="0 0 0"/>
+    <origin xyz="-5.551115123125783e-17 -0.25 -0.12762600183486938" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2_Mirror__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -174,19 +174,19 @@
 
 <link name="Tire_v2__2__Mirror__1">
   <inertial>
-    <origin xyz="-5.551115123125783e-17 0.5635 -0.17717399999999997" rpy="0 0 0"/>
+    <origin xyz="-5.551115123125783e-17 -0.25 -0.12762600183486938" rpy="0 0 0"/>
     <mass value="8.677104752089251"/>
     <inertia ixx="0.06032" iyy="0.112527" izz="0.06032" ixy="0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.3048 0.25 -0.3048" rpy="0 0 0"/>
+    <origin xyz="0.3048 -0.25 -0.12762600183486938" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2__2__Mirror__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.3048 0.25 -0.3048" rpy="0 0 0"/>
+    <origin xyz="0.3048 -0.25 -0.12762600183486938" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find ROS_description)/meshes/Tire_v2__2__Mirror__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -239,35 +239,37 @@
   <origin xyz="0.3048 -0.0254 -0.3048" rpy="0 0 0"/>
   <parent link="sus_top_1"/>
   <child link="Tire_v2__1__1"/>
-  <axis xyz="0.0 -1.0 0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="rm" type="continuous">
-  <origin xyz="0.1524 0.0 0.280026" rpy="0 0 0"/>
+  <origin xyz="0.1524 0.0 -0.1524" rpy="0 0 0"/>
   <parent link="sus_bot_1"/>
   <child link="Tire_v2_1"/>
-  <axis xyz="0.0 -1.0 0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="rb" type="continuous">
-  <origin xyz="-0.1524 0.0 0.280026" rpy="0 0 0"/>
+  <origin xyz="-0.1524 0.0 -0.1524" rpy="0 0 0"/>
   <parent link="sus_bot_1"/>
   <child link="Tire_v2__2__1"/>
-  <axis xyz="0.0 -1.0 0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
-<joint name="rs2" type="continuous">
+<joint name="rs2" type="revolute">
   <origin xyz="-0.1524 0.0 -0.1524" rpy="0 0 0"/>
   <parent link="sus_top_1"/>
   <child link="sus_bot_1"/>
   <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="30" velocity="1.0" lower="-0.5" upper="0.5" />
 </joint>
 
-<joint name="rs1" type="continuous">
+<joint name="rs1" type="revolute">
   <origin xyz="0.0 -0.25 0.432426" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="sus_top_1"/>
-  <axis xyz="0.0 -1.0 0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="30" velocity="1.0" lower="-0.5" upper="0.5" />
 </joint>
 
 <joint name="lf" type="continuous">
@@ -278,31 +280,33 @@
 </joint>
 
 <joint name="lm" type="continuous">
-  <origin xyz="0.1524 -0.5 0.024774" rpy="0 0 0"/>
+  <origin xyz="0.1524 0.0 -0.1524" rpy="0 0 0"/>
   <parent link="sus_bot_Mirror__1"/>
   <child link="Tire_v2_Mirror__1"/>
   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="lb" type="continuous">
-  <origin xyz="-0.1524 -0.5 0.024774" rpy="0 0 0"/>
+  <origin xyz="-0.1524  0.0 -0.1524" rpy="0 0 0"/>
   <parent link="sus_bot_Mirror__1"/>
   <child link="Tire_v2__2__Mirror__1"/>
   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
-<joint name="ls2" type="continuous">
+<joint name="ls2" type="revolute">
   <origin xyz="-0.1524 0.0 -0.1524" rpy="0 0 0"/>
   <parent link="sus_top_Mirror__1"/>
   <child link="sus_bot_Mirror__1"/>
   <axis xyz="0.0 -1.0 0.0"/>
+  <limit effort="30" velocity="1.0" lower="-0.5" upper="0.5" />
 </joint>
 
-<joint name="ls1" type="continuous">
+<joint name="ls1" type="revolute">
   <origin xyz="0.0 0.25 0.432426" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="sus_top_Mirror__1"/>
   <axis xyz="0.0 -1.0 0.0"/>
+  <limit effort="30" velocity="1.0" lower="-0.5" upper="0.5" />
 </joint>
 
 </robot>
