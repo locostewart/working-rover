@@ -31,7 +31,7 @@ def generate_launch_description():
    
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")),
-        launch_arguments={"gz_args": "-r -v 4 empty.sdf"}.items()
+        launch_arguments={"gz_args": "-r -v 4   dem_moon.sdf"}.items()
     )
 
     spawn_robot = TimerAction(
