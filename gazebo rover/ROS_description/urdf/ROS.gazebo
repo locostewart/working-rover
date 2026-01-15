@@ -4,7 +4,7 @@
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
 <gazebo reference="base_link">
-  <material>${body_color}</material>
+  <material>Gazebo/Gray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
@@ -12,77 +12,77 @@
 </gazebo>
 
 <gazebo reference="Tire_v2__1__1">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkGray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="Tire_v2_1">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkGray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="Tire_v2__2__1">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkGray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="sus_bot_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Gray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="sus_top_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Gray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="Tire_v2__1__Mirror__1">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkGray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="Tire_v2_Mirror__1">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkGray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="Tire_v2__2__Mirror__1">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkGray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="sus_bot_Mirror__1">
-  <material>${body_color}</material>
+  <material>Gazebo/Gray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="sus_top_Mirror__1">
-  <material>${body_color}</material>
+  <material>Gazebo/Gray</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="lidar_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Blue</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <self_collide>true</self_collide>
@@ -119,6 +119,42 @@
 
 </plugin>
 </gazebo>
+<gazebo reference="camera_link">
+  <sensor name="depth_camera" type="rgbd_camera">
+    <always_on>true</always_on>
+    <visualize>true</visualize>
+    <update_rate>5.0</update_rate>
+    <topic>depth_camera</topic>
+    <gz_frame_id>camera_link</gz_frame_id>
+
+    <camera>
+      <horizontal_fov>1.047198</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>3</far>
+      </clip>
+    </camera>
+
+    <baseline>0.2</baseline>
+    <pointCloudCutoff>0.5</pointCloudCutoff>
+    <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+
+    <distortionK1>0</distortionK1>
+    <distortionK2>0</distortionK2>
+    <distortionK3>0</distortionK3>
+    <distortionT1>0</distortionT1>
+    <distortionT2>0</distortionT2>
+    <CxPrime>0</CxPrime>
+    <Cx>0</Cx>
+    <Cy>0</Cy>
+    <focalLength>0</focalLength>
+    <hackBaseline>0</hackBaseline>
+  </sensor>
+</gazebo>
 
 
 <gazebo reference="lidar_1">
@@ -151,7 +187,9 @@
           <visualize>true</visualize>
         </sensor>
  </gazebo>
+ 
+ 
+
 
 
 </robot>
-
