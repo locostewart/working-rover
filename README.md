@@ -55,8 +55,9 @@ cd ros2_ws
 ```
 source install/setup.bash
 colcon build
-sudo apt install ros-${ROS_DISTRO}-rqt-robot-steering
-rqt --force-discover
+sudo apt install ros-jazzy-teleop-twist-keyboard
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
 ```
 This should open the controller.  WASD moves the sliders.  This should be everything you need, but there is an optional step below for the computer vision aspect:
 Open a third linux tab and run the following commands one at a time:
